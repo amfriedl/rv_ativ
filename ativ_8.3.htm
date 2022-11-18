@@ -7,8 +7,12 @@
   <body>
     <a-scene reflection shadow="type: pcfsoft">
         <a-assets>
-            <a-asset-item id="heli" src="objetos/Heli_bell.obj"></a-asset-item>
-            <a-asset-item id="heli-mtl" src="objetos/Heli_bell.mtl"></a-asset-item>
+            <a-asset-item id="heli" src="objetos/heli.obj"></a-asset-item>
+            <a-asset-item id="heli2" src="objetos/heli2.obj"></a-asset-item>
+            <a-asset-item id="heli3" src="objetos/heli3.obj"></a-asset-item>
+            <a-asset-item id="heli-mtl" src="objetos/heli.mtl"></a-asset-item>
+            <a-asset-item id="heli2-mtl" src="objetos/heli2.mtl"></a-asset-item>
+            <a-asset-item id="heli3-mtl" src="objetos/heli3.mtl"></a-asset-item>
             <img id="heliporto" src="imagens/helipad.jpg">
             <img id="ceu" src="imagens/miami.jpeg">
         </a-assets>
@@ -16,10 +20,13 @@
         <a-entity camera="fov:20; near:1;" orbit-controls="target: 0 0 0; minDistance: 0.5; 
           maxDistance: 180; initialPosition: 5 7 21"></a-entity>
         <a-entity position="0 0 0" scale="0.8 0.8 0.8" rotation="0 -15 0">
-            <a-obj-model src="#heli" mtl="#heli-mtl" shadow ></a-obj-model>
+            <a-obj-model src="#heli" mtl="#heli1-mtl" shadow ></a-obj-model>
         </a-entity>
         <a-entity position="0 0 0" scale="0.8 0.8 0.8" rotation="0 -15 0">
-            <a-obj-model src="#heli2" mtl="#heli-mtl" shadow ></a-obj-model>
+            <a-obj-model src="#heli2" mtl="#heli2-mtl" shadow ></a-obj-model>
+        </a-entity>
+        <a-entity position="0 0 0" scale="0.8 0.8 0.8" rotation="0 -15 0">
+            <a-obj-model src="#heli3" mtl="#heli3-mtl" shadow ></a-obj-model>
         </a-entity>
         <a-box shadow scale="10 0.1 10" position="0 -0.05 0" src=#heliporto"></a-box>
         <a-light type="ambient" color="#bbb" intensity="0.6"></a-light>
