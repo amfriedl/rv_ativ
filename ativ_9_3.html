@@ -13,49 +13,37 @@
     <a-scene embedded renderer="logarithmicDepthBuffer: true;" arjs='sourceType: webcam; trackingMethod: best; 
       detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;'>
         <a-assets>
-            <a-asset-item id="modelo" src="objetos/helicoptero.glb"></a-asset-item>
-            <a-asset-item id="modelo1" src="objetos/helicea.glb"></a-asset-item>
-            <a-asset-item id="modelo2" src="objetos/heliceb.glb"></a-asset-item>
-            <a-asset-item id="modelo3" src="objetos/lamp2/scene.gltf"></a-asset-item>
-            <a-asset-item id="modelo4" src="objetos/evening/scene.gltf"></a-asset-item>
+        	<a-asset-item id="heli" src="objetos/heli.obj"></a-asset-item>
+        	<a-asset-item id="heli2" src="objetos/heli2.obj"></a-asset-item>
+        	<a-asset-item id="heli3" src="objetos/heli3.obj"></a-asset-item>
+        	<a-asset-item id="heli-mtl" src="objetos/heli.mtl"></a-asset-item>
+        	<a-asset-item id="heli2-mtl" src="objetos/heli2.mtl"></a-asset-item>
+        	<a-asset-item id="heli3-mtl" src="objetos/heli3.mtl"></a-asset-item>
+		<a-asset-item id="modelo2" src="objetos/hat1/hat2.gltf"></a-asset-item>
+		<a-asset-item id="modelo3" src="objetos/hat2/hat1.gltf"></a-asset-item>
         </a-assets>
 
         <a-marker preset="hiro">
             <a-entity scale="0.5 0.5 0.5" position="0 0.5 0">
-                <a-gltf-model src="#modelo"></a-gltf-model>
-                <a-entity position="0 0 0">
-                    <a-gltf-model src="#modelo1" animation="property: rotation; to: 0 360 0; 
-                      loop: true; dur: 4000; easing: linear"></a-gltf-model>
-                </a-entity>
-                <a-entity position="0.037 1.947 5.267" rotation="10 0 0">
-                    <a-gltf-model src="#modelo2" animation="property: rotation; to: 360 0 0; 
-                      loop: true; dur: 3200; easing: linear"></a-gltf-model>
-                </a-entity>
+                <a-obj-model src="#heli" mtl="#heli-mtl" shadow ></a-obj-model>
+        		<a-entity position="0.010517 5.86407 -0.725011 " scale="1 1 1" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; easing: linear">
+            			<a-obj-model src="#heli2" mtl="#heli2-mtl" shadow ></a-obj-model>
+        		</a-entity>
+       			<a-entity position="0.38659 3.43684 -11.9838" scale="1 1 1" rotation="0 0 0" animation="property: rotation; to: 360 0 0; loop: true; easing: linear">
+            			<a-obj-model src="#heli3" mtl="#heli3-mtl" shadow ></a-obj-model>
+        		</a-entity>
             </a-entity>
         </a-marker>
 		
         <a-marker type="barcode" value="20">
             <a-entity scale="0.5 0.5 0.5" position="0 0.05 0">
-                <a-gltf-model src="#modelo3"></a-gltf-model>
-            </a-entity>
-        </a-marker>
-		
-        <a-marker type="barcode" value="17">
-            <a-entity position="1.5 0.05 -2">
-                <a-entity position="0 1 0" animation="property:rotation; to:0 360 0; dur:8000; 
-                  easing:linear; loop:true">
-                    <a-octahedron color="orange" radius="1" opacity="0.8"></a-octahedron>
-                    <a-octahedron color="grey" radius="1" wireframe="true"></a-octahedron>
-                </a-entity>
-                <a-box position="0 1 0" scale="2 2 2" color="blue" opacity="0.6"></a-box>
-                <a-text position="-1 0 2" rotation="-90 0 0" text="width:6; side:double; color:black"
-                  value="Octaedro em RA"></a-text>
+                <a-gltf-model src="#modelo2"></a-gltf-model>
             </a-entity>
         </a-marker>
 		
         <a-marker type="barcode" value="10">
             <a-entity scale="0.01 0.01 0.01" position="0 0.05 0">
-                <a-gltf-model src="#modelo4" animation-mixer></a-gltf-model>
+                <a-gltf-model src="#modelo3" animation-mixer></a-gltf-model>
             </a-entity>
         </a-marker>
 		
