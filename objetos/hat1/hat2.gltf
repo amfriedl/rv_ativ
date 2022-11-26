@@ -105,29 +105,29 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 4455,
+            "count" : 4454,
             "max" : [
-                15.546160697937012,
-                30.292892456054688,
-                18.53595542907715
+                15.404088973999023,
+                19.256885528564453,
+                6.7392425537109375
             ],
             "min" : [
-                -14.837668418884277,
-                -8.30272102355957,
-                6.746943473815918
+                -14.979740142822266,
+                -19.338729858398438,
+                -5.049769401550293
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 4455,
+            "count" : 4454,
             "type" : "VEC3"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 4455,
+            "count" : 4454,
             "type" : "VEC2"
         },
         {
@@ -140,26 +140,26 @@
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 53460,
+            "byteLength" : 53448,
             "byteOffset" : 0,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 53460,
-            "byteOffset" : 53460,
+            "byteLength" : 53448,
+            "byteOffset" : 53448,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 35640,
-            "byteOffset" : 106920,
+            "byteLength" : 35632,
+            "byteOffset" : 106896,
             "target" : 34962
         },
         {
             "buffer" : 0,
             "byteLength" : 43008,
-            "byteOffset" : 142560,
+            "byteOffset" : 142528,
             "target" : 34963
         }
     ],
@@ -171,7 +171,7 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 185568,
+            "byteLength" : 185536,
             "uri" : "hat2.bin"
         }
     ]
