@@ -13,12 +13,25 @@
     <a-scene vr-mode-ui="enabled: false" renderer="logarithmicDepthBuffer: true;" embedded arjs='sourceType: webcam; 
       debugUIEnabled: false;'>
         <a-assets>
-            <a-asset-item id="modelo" src="objetos/low_poly_helicpoter.glb"></a-asset-item>
+           <a-asset-item id="heli" src="objetos/heli.obj"></a-asset-item>
+            <a-asset-item id="heli2" src="objetos/heli2.obj"></a-asset-item>
+            <a-asset-item id="heli3" src="objetos/heli3.obj"></a-asset-item>
+            <a-asset-item id="heli-mtl" src="objetos/heli.mtl"></a-asset-item>
+            <a-asset-item id="heli2-mtl" src="objetos/heli2.mtl"></a-asset-item>
+            <a-asset-item id="heli3-mtl" src="objetos/heli3.mtl"></a-asset-item>
         </a-assets>
 
         <a-entity look-at="[gps-camera]" gps-entity-place="latitude: -25.484798337774997; longitude: -49.22862615332549;">
             <a-entity rotation="0 120 0" scale="0.5 0.5 0.5" position="2 0 -4"> 
-                <a-gltf-model src="#modelo"></a-gltf-model>
+                <a-entity position="0 0 0" scale="1 1 1" rotation="0 0 0">
+            <a-obj-model src="#heli" mtl="#heli-mtl" shadow ></a-obj-model>
+        </a-entity>
+        <a-entity position="0.010517 5.86407 -0.725011 " scale="1 1 1" rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; easing: linear">
+            <a-obj-model src="#heli2" mtl="#heli2-mtl" shadow ></a-obj-model>
+        </a-entity>
+        <a-entity position="0.38659 3.43684 -11.9838" scale="1 1 1" rotation="0 0 0" animation="property: rotation; to: 360 0 0; loop: true; easing: linear">
+            <a-obj-model src="#heli3" mtl="#heli3-mtl" shadow ></a-obj-model>
+        </a-entity>
             </a-entity>
         </a-entity>
 		
